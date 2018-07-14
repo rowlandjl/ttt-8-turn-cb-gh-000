@@ -16,8 +16,8 @@ def valid_move?(board, index)
   #   else
   #     true
   #   end
-
-  if index >= 0 && index <= 8 && !position_taken?(board, index - 1) 
+  index = input_to_index(index)
+  if index >= 0 && index <= 8 && !position_taken?(board, index - 1)
     true
   else
     false
