@@ -16,9 +16,9 @@ end
 
 def valid_move?(board, index)
   if index.between?(0, 9)
-    true 
+    true
   else
-    false 
+    false
   end 
 end
 
