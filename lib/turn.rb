@@ -19,6 +19,11 @@ def valid_move?(board, index)
 
   if index >= 0 && index <= 8
     true
+    if board[index] == " "
+      false
+    else
+      true
+    end 
   else
     false
   end
@@ -48,6 +53,6 @@ def turn(board)
     display_board(board)
   else
     puts "Please enter 1-9:"
-    input = gets.strip 
+    input = gets.strip
   end
 end
