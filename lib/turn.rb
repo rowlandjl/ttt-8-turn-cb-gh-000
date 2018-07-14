@@ -17,7 +17,7 @@ def valid_move?(board, index)
   #     true
   #   end
 
-  if index >= 0 && index <= 8 
+  if index >= 0 && index <= 8
     true
   else
     false
@@ -43,7 +43,7 @@ def turn(board)
   input = gets.strip
   index = input_to_index(input)
 
-  if valid_move?(board, index) == true
+  if valid_move?(board, index) == true && position_taken?(board, index) == true 
     move(board, index)
     display_board(board)
   else
