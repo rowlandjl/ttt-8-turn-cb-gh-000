@@ -7,7 +7,11 @@ def display_board(board)
 end
 
 def input_to_index(index)
-  index.to_i - 1
+  if index.to_i >= 0
+    index.to_i - 1
+  else
+    -1
+  end 
 end
 
 def valid_move?(board, index)
@@ -31,7 +35,7 @@ def turn(board)
   input = gets.strip
   index = input_to_index(input)
 
-  if valid_move?(board, index) == true 
+  if valid_move?(board, index) == true
     move(board, index)
     display_board(board)
   else
